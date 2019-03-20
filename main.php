@@ -5,6 +5,7 @@
  * Date: 3/10/2016
  * Time: 11:42 PM
  */
+
 namespace xeki_mail;
 require_once dirname(__FILE__) . "/core/mail.php";
 
@@ -25,7 +26,7 @@ class main
     function getObject()
     {
         if (self::$sql == null) {
-        
+
             self::$sql = new mail($this->config);
         }
 //        d(self::$sql);
