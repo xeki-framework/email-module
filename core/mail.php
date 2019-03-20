@@ -1,5 +1,5 @@
 <?php
-namespace email_module;
+namespace xeki_mail;
 use Mailgun\Mailgun; # con ganas de mandarlo a la !!!
 use Aws\Ses\SesClient;
 use GuzzleHttp\Client;
@@ -89,7 +89,7 @@ class mail
 
     private function send_by_mail_gun($info){
 
-        require_once dirname(__FILE__) . '/libs/vendor/autoload.php';
+
 
         $return="";
         try{
@@ -142,7 +142,7 @@ class mail
     }
 
     private function send_by_aws_ses($array_info){
-        require_once dirname(__FILE__) . '/libs/vendor/autoload.php';
+
             
         $config = array(
             'credentials' => array(

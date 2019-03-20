@@ -5,7 +5,7 @@
  * Date: 3/10/2016
  * Time: 11:42 PM
  */
-namespace email_module;
+namespace xeki_mail;
 require_once dirname(__FILE__) . "/core/mail.php";
 
 class main
