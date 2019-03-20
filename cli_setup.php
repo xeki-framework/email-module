@@ -7,32 +7,38 @@
 
 // Force cli run this
 // Check is is cli
-if(!is_cli()){
+if (!is_cli()) {
     die();
 }
-$name_module = "db-sql";
-$name_module_full = "$name_module-module";
+$name_module = "mail";
+$name_module_full = "$name_module";
+
 
 // Check if have config
-$config_folder = \xeki\core::$SYSTEM_PATH_BASE."/core/modules_config/$name_module";
-$config_folder_file = $config_folder."/config.php";
+$config_folder = \xeki\core::$SYSTEM_PATH_BASE . "/core/modules_config/$name_module";
+$config_folder_file = $config_folder . "/config.php";
 
 
 // Create folder
-if(!file_exists($config_folder)){
-    mkdir($config_folder,0777,true);
+if (!file_exists($config_folder)) {
+    mkdir($config_folder, 0777, true);
 }
 
-$config_default = \xeki\core::$SYSTEM_PATH_BASE."/modules/$name_module_full/setup/default_config.php";
-if(!file_exists($config_folder_file)){
-    copy($config_default,$config_folder_file);
+$config_default = \xeki\core::$SYSTEM_PATH_BASE . "/modules/$name_module_full/setup/default_config.php";
+if (!file_exists($config_folder_file)) {
+    copy($config_default, $config_folder_file);
 }
 
-// TODO clean for mail gun
-// Create mail as base and create
-// mail-aws ( a lot of libs )
-// mail-mailgun
-// mail-smtp
+// generate db
+try {
+//    $sql = \xeki\module_manager::import_module('db-sql');
+//    require(dirname(__FILE__)."/setup/setup_db.php");
+} catch (Exception $e) {
+    d("Import and init sql first and try again");
+}
+
+
+// load libs
 exec("composer require aws/aws-sdk-php");
 exec("composer require phpmailer/phpmailer");
 exec("composer require mailgun/mailgun-php");
@@ -42,5 +48,8 @@ exec("composer require guzzlehttp/guzzle");
 exec("composer require php-http/guzzle6-adapter");
 exec("composer require mailgun/mailgun-php php-http/curl-client guzzlehttp/psr7");
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5d8ebd8b50ab15c4a5a7912a9642da0e36d5c4d9

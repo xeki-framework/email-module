@@ -1,9 +1,9 @@
 <?php
 
-$__module_name="Data Base Sql";
-$__config_path="db-sql";
-$__name_space="db_sql";
+$__module_name = "Mail";
+$__config_path = "mail";
+$__name_space = "xeki_mail";
 
-$__modules_required=[
-    ""
+$__modules_required = [
+    "mail"
 ];
