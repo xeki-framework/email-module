@@ -1,5 +1,5 @@
 <?php
-namespace xeki_mail;
+namespace email_module;
 use Mailgun\Mailgun; # con ganas de mandarlo a la !!!
 use Aws\Ses\SesClient;
 use GuzzleHttp\Client;

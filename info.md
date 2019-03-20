@@ -3,7 +3,7 @@
 ## Import Module
 + Import module
 ```php
-$mail =  \xeki\module_manager::import_module('xeki_mail');
+$mail =  \xeki\module_manager::import_module('email_module');
 
 ```
 
@@ -12,7 +12,7 @@ $mail =  \xeki\module_manager::import_module('xeki_mail');
 + Min Full code for send a email TODO
 
 ```php
-$mail =  \xeki\module_manager::import_module('xeki_mail');
+$mail =  \xeki\module_manager::import_module('email_module');
     $to = $vl_values['email'];
     $subject = "Confirmacion Contacto";
     $path = dirname(__FILE__)."/pages/mail/"."contacto.html";
