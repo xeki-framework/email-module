@@ -48,8 +48,5 @@ exec("composer require guzzlehttp/guzzle");
 exec("composer require php-http/guzzle6-adapter");
 exec("composer require mailgun/mailgun-php php-http/curl-client guzzlehttp/psr7");
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 5d8ebd8b50ab15c4a5a7912a9642da0e36d5c4d9
